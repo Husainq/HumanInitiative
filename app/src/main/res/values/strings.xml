@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Mobile</string>
+    <string name="teks_awal">Human Initiative menjamin tidak akan mendukung atau menyediakan dana/material untuk individu maupun organisasi yang dikenal menganjurkan, mendukung, atau terlibat dalam aktivitas melanggar hukum, kekerasan, pencucian uang ataupun terorisme.</string>
+    <string name="teks_halo">Hello Fatur Daniel</string>
+    <string name="teks_halo2">Let’s do something today</string>
+    <string name="donate">Donasi</string>
+    <string name="add">Tambah</string>
+    <string name="profile">Profil</string>
+    <string name="history">Riwayat</string>
+    <string name="persetujuan">Saya bersedia menerima sanksi apabila informasi tersebut tidak valid</string>
+    <string name="nama">Fatur Daniel</string>
+    <string name="nohp">+62 852-6955-3057</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

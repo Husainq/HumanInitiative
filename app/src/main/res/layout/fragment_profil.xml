@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ProfilFragment"
+    android:background="@color/white">
+
+    <include
+        android:id="@+id/header"
+        layout="@layout/header_profil"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/cl"
+        />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/header"
+        android:layout_centerHorizontal="true">
+
+        <ImageView
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:id="@+id/foto"
+            android:layout_width="122dp"
+            android:layout_height="120dp"
+            android:src="@drawable/fotop" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/namauser"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppinssemibold"
+        android:textColor="@color/black"
+        android:text="@string/nama"
+        android:layout_marginTop="10dp"
+        android:layout_centerHorizontal="true"
+        android:textSize="22sp"
+        android:layout_below="@id/cl"/>
+
+    <TextView
+        android:id="@+id/nouser"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppinssemibold"
+        android:textColor="@color/black"
+        android:text="@string/nohp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/namauser"/>
+
+    <ImageView
+        android:id="@+id/line"
+        android:layout_width="1000dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="35dp"
+        android:layout_below="@id/nouser"
+        android:src="@drawable/line"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="45dp"
+        android:layout_below="@id/line">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <ImageView
+                android:id="@+id/edtprof"
+                android:layout_width="30sp"
+                android:layout_height="30dp"
+                android:src="@drawable/userhitam"/>
+
+            <TextView
+                android:id="@+id/txt_edtprof"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
+                android:layout_gravity="center"
+                android:fontFamily="@font/poppinssemibold"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:text="Ubah Profil"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="18dp">
+            <ImageView
+                android:id="@+id/respass"
+                android:layout_width="30sp"
+                android:layout_height="30dp"
+                android:src="@drawable/security"/>
+
+            <TextView
+                android:id="@+id/txt_respass"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
+                android:layout_gravity="center"
+                android:fontFamily="@font/poppinssemibold"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:text="Ubah Password"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="18dp">
+            <ImageView
+                android:id="@+id/out"
+                android:layout_width="30sp"
+                android:layout_height="30dp"
+                android:src="@drawable/exit"/>
+
+            <TextView
+                android:id="@+id/txt_out"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
+                android:layout_gravity="center"
+                android:fontFamily="@font/poppinssemibold"
+                android:textColor="@color/merah"
+                android:textSize="16sp"
+                android:text="Keluar"/>
+        </LinearLayout>
+    </LinearLayout>
+
+
+</RelativeLayout>
