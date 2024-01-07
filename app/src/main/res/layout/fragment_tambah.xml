@@ -9,161 +9,160 @@
     tools:context=".TambahFragment"
     >
 
-    <include
-        android:id="@+id/header"
-        layout="@layout/header_tambah"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toTopOf="@+id/edtJudul"
-        />
-
-    <EditText
-        android:id="@+id/edtJudul"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:background="@drawable/border"
-        android:paddingLeft="15dp"
-        android:fontFamily="@font/poppinsregular"
-        android:textSize="15sp"
-        android:textColor="@color/SecondaryColor"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="8dp"
-        android:ems="10"
-        android:hint="Judul"
-        android:inputType="text"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/header"
-         />
-
-    <EditText
-        android:id="@+id/edtBencana"
-        android:layout_width="0dp"
-        android:layout_height="50dp"
-        android:background="@drawable/border"
-        android:paddingLeft="15dp"
-        android:fontFamily="@font/poppinsregular"
-        android:textSize="15sp"
-        android:textColor="@color/SecondaryColor"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="8dp"
-        android:ems="10"
-        android:hint="Bencana Alam"
-        android:inputType="text"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/edtJudul" />
-
-    <EditText
-        android:id="@+id/edtKategori"
-        android:layout_width="0dp"
-        android:layout_height="50dp"
-        android:background="@drawable/border"
-        android:paddingLeft="15dp"
-        android:fontFamily="@font/poppinsregular"
-        android:textSize="15sp"
-        android:textColor="@color/SecondaryColor"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="8dp"
-        android:ems="10"
-        android:hint="Kategori (Bencana Alam Meteorologi)"
-        android:inputType="text"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/edtBencana" />
-
-    <EditText
-        android:id="@+id/edtTarget"
-        android:layout_width="0dp"
-        android:layout_height="50dp"
-        android:background="@drawable/border"
-        android:paddingLeft="15dp"
-        android:fontFamily="@font/poppinsregular"
-        android:textSize="15sp"
-        android:textColor="@color/SecondaryColor"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="8dp"
-        android:ems="10"
-        android:hint="Target Donasi"
-        android:inputType="number"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/edtKategori" />
-
-    <EditText
-        android:id="@+id/edtTingkat"
-        android:layout_width="0dp"
-        android:layout_height="50dp"
-        android:background="@drawable/border"
-        android:paddingLeft="15dp"
-        android:fontFamily="@font/poppinsregular"
-        android:textSize="15sp"
-        android:textColor="@color/SecondaryColor"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="8dp"
-        android:ems="10"
-        android:hint="Tingkat Kerusakan"
-        android:inputType="number"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/edtTarget" />
-
-    <EditText
-        android:id="@+id/edtNama"
-        android:layout_width="0dp"
-        android:layout_height="50dp"
-        android:background="@drawable/border"
-        android:paddingLeft="15dp"
-        android:fontFamily="@font/poppinsregular"
-        android:textSize="15sp"
-        android:textColor="@color/SecondaryColor"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="8dp"
-        android:ems="10"
-        android:hint="Nama Rekening Penerima"
-        android:inputType="text"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/edtTingkat" />
-
-    <EditText
-        android:id="@+id/edtNorek"
-        android:layout_width="0dp"
-        android:layout_height="50dp"
-        android:background="@drawable/border"
-        android:paddingLeft="15dp"
-        android:fontFamily="@font/poppinsregular"
-        android:textSize="15sp"
-        android:textColor="@color/SecondaryColor"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="8dp"
-        android:ems="10"
-        android:hint="No Rekening Penerima"
-        android:inputType="text"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/edtNama" />
-
-    <Button
-        android:id="@+id/btnSimpan"
-        android:layout_width="200dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:background="@drawable/button_shape"
-        android:text="Simpan"
-        android:fontFamily="@font/poppinssemibold"
+        android:id="@+id/header"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/edtNorek" />
+        app:layout_constraintBottom_toTopOf="@id/sview"
+        >
+
+        <include
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            layout="@layout/header_tambah"
+            />
+    </LinearLayout>
+
+    <ScrollView
+        android:id="@+id/sview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/header">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:id="@+id/linear">
+
+            <EditText
+                android:id="@+id/edtJudul"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/border"
+                android:paddingLeft="15dp"
+                android:fontFamily="@font/poppinsregular"
+                android:textSize="15sp"
+                android:textColor="@color/SecondaryColor"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="8dp"
+                android:ems="10"
+                android:hint="Judul"
+                android:inputType="text"
+                />
+
+            <EditText
+                android:id="@+id/edtBencana"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/border"
+                android:paddingLeft="15dp"
+                android:fontFamily="@font/poppinsregular"
+                android:textSize="15sp"
+                android:textColor="@color/SecondaryColor"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="8dp"
+                android:ems="10"
+                android:hint="Bencana Alam"
+                android:inputType="text" />
+
+            <EditText
+                android:id="@+id/edtKategori"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/border"
+                android:paddingLeft="15dp"
+                android:fontFamily="@font/poppinsregular"
+                android:textSize="15sp"
+                android:textColor="@color/SecondaryColor"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="8dp"
+                android:ems="10"
+                android:hint="Kategori (Bencana Alam Meteorologi)"
+                android:inputType="text"/>
+
+            <EditText
+                android:id="@+id/edtTarget"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/border"
+                android:paddingLeft="15dp"
+                android:fontFamily="@font/poppinsregular"
+                android:textSize="15sp"
+                android:textColor="@color/SecondaryColor"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="8dp"
+                android:ems="10"
+                android:hint="Target Donasi"
+                android:inputType="number"/>
+
+            <EditText
+                android:id="@+id/edtTingkat"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/border"
+                android:paddingLeft="15dp"
+                android:fontFamily="@font/poppinsregular"
+                android:textSize="15sp"
+                android:textColor="@color/SecondaryColor"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="8dp"
+                android:ems="10"
+                android:hint="Tingkat Kerusakan"
+                android:inputType="number"/>
+
+            <EditText
+                android:id="@+id/edtNama"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/border"
+                android:paddingLeft="15dp"
+                android:fontFamily="@font/poppinsregular"
+                android:textSize="15sp"
+                android:textColor="@color/SecondaryColor"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="8dp"
+                android:ems="10"
+                android:hint="Nama Rekening Penerima"
+                android:inputType="text" />
+
+            <EditText
+                android:id="@+id/edtNorek"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/border"
+                android:paddingLeft="15dp"
+                android:fontFamily="@font/poppinsregular"
+                android:textSize="15sp"
+                android:textColor="@color/SecondaryColor"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="8dp"
+                android:ems="10"
+                android:hint="No Rekening Penerima"
+                android:inputType="text" />
+
+            <Button
+                android:id="@+id/btnSimpan"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_gravity="center"
+                android:background="@drawable/button_shape"
+                android:text="Simpan"
+                android:fontFamily="@font/poppinssemibold" />
+
+        </LinearLayout>
+    </ScrollView>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

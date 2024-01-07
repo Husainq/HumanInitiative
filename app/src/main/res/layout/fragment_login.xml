@@ -25,11 +25,11 @@
         android:padding="30dp">
 
         <EditText
-            android:id="@+id/edt_username"
+            android:id="@+id/edt_email"
             android:layout_width="match_parent"
             android:layout_height="57dp"
             android:background="@drawable/border"
-            android:hint="Username"
+            android:hint="Email"
             android:paddingLeft="15dp"
             android:inputType="text"
             android:fontFamily="@font/poppinsregular"

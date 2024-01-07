@@ -6,7 +6,7 @@
     android:layout_height="match_parent">
 
     <EditText
-        android:id="@+id/upJudul"
+        android:id="@+id/upUName"
         android:layout_width="0dp"
         android:fontFamily="@font/poppinsregular"
         android:textSize="18sp"
@@ -23,7 +23,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/upBencana"
+        android:id="@+id/upUEmail"
         android:layout_width="0dp"
         android:layout_height="50dp"
         android:fontFamily="@font/poppinsregular"
@@ -38,10 +38,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/upJudul" />
+        app:layout_constraintTop_toBottomOf="@+id/upUName" />
 
     <EditText
-        android:id="@+id/upKategori"
+        android:id="@+id/upUNoHp"
         android:layout_width="0dp"
         android:layout_height="50dp"
         android:layout_marginStart="8dp"
@@ -56,10 +56,10 @@
         android:textColor="@color/SecondaryColor"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/upBencana" />
+        app:layout_constraintTop_toBottomOf="@+id/upUEmail" />
 
     <EditText
-        android:id="@+id/upTarget"
+        android:id="@+id/upUPass"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -74,60 +74,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/upKategori" />
+        app:layout_constraintTop_toBottomOf="@+id/upUNoHp" />
 
-    <EditText
-        android:id="@+id/upTingkat"
-        android:layout_width="0dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="8dp"
-        android:fontFamily="@font/poppinsregular"
-        android:textSize="18sp"
-        android:textColor="@color/SecondaryColor"
-        android:ems="10"
-        android:hint="Tingkat Kerusakan"
-        android:inputType="number"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/upTarget" />
-
-    <EditText
-        android:id="@+id/upNama"
-        android:layout_width="0dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="8dp"
-        android:fontFamily="@font/poppinsregular"
-        android:textSize="18sp"
-        android:textColor="@color/SecondaryColor"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="8dp"
-        android:ems="10"
-        android:hint="Nama Rekening Penerima"
-        android:inputType="text"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/upTingkat" />
-
-    <EditText
-        android:id="@+id/upNoRek"
-        android:layout_width="0dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="16dp"
-        android:fontFamily="@font/poppinsregular"
-        android:textSize="18sp"
-        android:textColor="@color/SecondaryColor"
-        android:layout_marginEnd="8dp"
-        android:ems="10"
-        android:hint="No Rekening Penerima"
-        android:inputType="text"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/upNama" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

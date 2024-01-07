@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.View
 import android.widget.Button
 import android.widget.EditText
+import android.widget.TextView
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentTransaction
@@ -22,26 +23,28 @@ class RegisFragment : Fragment(R.layout.fragment_regis) {
         auth = Firebase.auth
 
         // Inisialisasi elemen-elemen UI
-        val name: EditText = view.findViewById(R.id.edt_username)
-        val nohp: EditText = view.findViewById(R.id.edt_mobilenumber)
-        val sandi: EditText = view.findViewById(R.id.edt_pass)
+        val uemail: EditText = view.findViewById(R.id.edt_email)
+        val uname: EditText = view.findViewById(R.id.edt_username)
+        val unohp: EditText = view.findViewById(R.id.edt_mobilenumber)
+        val usandi: EditText = view.findViewById(R.id.edt_pass)
         val btnDaftar: Button = view.findViewById(R.id.button_daftar)
-        val txtLogin: Button = view.findViewById(R.id.txt_masuk)
+        val txtLogin: TextView = view.findViewById(R.id.txt_masuk)
 
         // Set listener untuk tombol daftar
         btnDaftar.setOnClickListener {
-            val username = name.text.toString().trim()
-            val nohandphone = nohp.text.toString().trim()
-            val password = sandi.text.toString().trim()
+            val gmail = uemail.text.toString().trim()
+            val username = uname.text.toString().trim()
+            val nohandphone = unohp.text.toString().trim()
+            val password = usandi.text.toString().trim()
 
             // Validasi input sebelum pendaftaran
-            if (username.isEmpty() || nohandphone.isEmpty() || password.isEmpty()) {
+            if (gmail.isEmpty() || username.isEmpty() || nohandphone.isEmpty() || password.isEmpty()) {
                 Toast.makeText(requireContext(), "Harap isi semua kolom", Toast.LENGTH_SHORT).show()
                 return@setOnClickListener
             }
 
             // Proses pendaftaran ke Firebase Authentication
-            auth.createUserWithEmailAndPassword(username, password)
+            auth.createUserWithEmailAndPassword(gmail, password)
                 .addOnCompleteListener(requireActivity()) { task ->
                     if (task.isSuccessful) {
                         // Pendaftaran berhasil
@@ -53,6 +56,7 @@ class RegisFragment : Fragment(R.layout.fragment_regis) {
                         val reference = database.getReference("User") // Ganti dengan lokasi yang benar di database Anda
 
                         val userData = HashMap<String, Any>()
+                        userData["email"] = gmail
                         userData["username"] = username
                         userData["nohandphone"] = nohandphone
                         userData["password"] = password
@@ -62,7 +66,6 @@ class RegisFragment : Fragment(R.layout.fragment_regis) {
                                 .addOnSuccessListener {
                                     // Data pengguna berhasil disimpan ke database
                                     Toast.makeText(requireContext(), "Pendaftaran berhasil!", Toast.LENGTH_SHORT).show()
-                                    // Redirect ke halaman utama setelah pendaftaran berhasil
                                     // Redirect ke halaman utama setelah pendaftaran berhasil
                                     val loginFragment = LoginFragment()
                                     val transaction: FragmentTransaction = requireFragmentManager().beginTransaction()

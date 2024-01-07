@@ -26,24 +26,24 @@ class LoginFragment : Fragment(R.layout.fragment_login) {
         auth = Firebase.auth
 
         // Inisialisasi elemen-elemen UI
-        val name: EditText = view.findViewById(R.id.edt_username)
-        val sandi: EditText = view.findViewById(R.id.edt_pass)
+        val uemail: EditText = view.findViewById(R.id.edt_email)
+        val usandi: EditText = view.findViewById(R.id.edt_pass)
         val btnMasuk: Button = view.findViewById(R.id.button_login)
         val txtDaftar: TextView = view.findViewById(R.id.txt_daftar)
 
         // Set listener untuk tombol masuk
         btnMasuk.setOnClickListener {
-            val username = name.text.toString().trim()
-            val password = sandi.text.toString().trim()
+            val gmail = uemail.text.toString().trim()
+            val password = usandi.text.toString().trim()
 
             // Validasi input sebelum masuk
-            if (username.isEmpty() || password.isEmpty()) {
+            if (gmail.isEmpty() || password.isEmpty()) {
                 Toast.makeText(requireContext(), "Harap isi semua kolom", Toast.LENGTH_SHORT).show()
                 return@setOnClickListener
             }
 
             // login process
-            auth.signInWithEmailAndPassword(username, password)
+            auth.signInWithEmailAndPassword(gmail, password)
                 .addOnCompleteListener(requireActivity()) { task ->
                     if (task.isSuccessful) {
                         val user = auth.currentUser

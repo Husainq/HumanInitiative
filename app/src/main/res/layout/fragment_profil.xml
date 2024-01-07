@@ -72,6 +72,7 @@
         android:layout_below="@id/line">
 
         <LinearLayout
+            android:id="@+id/editprofil"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
@@ -94,29 +95,7 @@
         </LinearLayout>
 
         <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_marginTop="18dp">
-            <ImageView
-                android:id="@+id/respass"
-                android:layout_width="30sp"
-                android:layout_height="30dp"
-                android:src="@drawable/security"/>
-
-            <TextView
-                android:id="@+id/txt_respass"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="25dp"
-                android:layout_gravity="center"
-                android:fontFamily="@font/poppinssemibold"
-                android:textColor="@color/black"
-                android:textSize="16sp"
-                android:text="Ubah Password"/>
-        </LinearLayout>
-
-        <LinearLayout
+            android:id="@+id/keluar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal"

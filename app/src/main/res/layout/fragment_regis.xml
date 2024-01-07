@@ -25,10 +25,24 @@
         android:padding="30dp">
 
         <EditText
+            android:id="@+id/edt_email"
+            android:layout_width="match_parent"
+            android:layout_height="57dp"
+            android:background="@drawable/border"
+            android:hint="Email"
+            android:inputType="text"
+            android:paddingLeft="15dp"
+            android:fontFamily="@font/poppinsregular"
+            android:textSize="13sp"
+            android:textColor="@color/SecondaryColor"
+            />
+
+        <EditText
             android:id="@+id/edt_username"
             android:layout_width="match_parent"
             android:layout_height="57dp"
             android:background="@drawable/border"
+            android:layout_marginTop="10dp"
             android:hint="Username"
             android:inputType="text"
             android:paddingLeft="15dp"
@@ -60,20 +74,6 @@
             android:layout_marginTop="10dp"
             android:fontFamily="@font/poppinsregular"
             android:hint="Kata Sandi"
-            android:paddingLeft="15dp"
-            android:textSize="13sp"
-            android:textColor="@color/SecondaryColor"
-            />
-
-        <EditText
-            android:id="@+id/edt_confpass"
-            android:layout_width="match_parent"
-            android:layout_height="57dp"
-            android:inputType="textPassword"
-            android:background="@drawable/border"
-            android:layout_marginTop="10dp"
-            android:fontFamily="@font/poppinsregular"
-            android:hint="Konfirmasi Kata Sandi"
             android:paddingLeft="15dp"
             android:textSize="13sp"
             android:textColor="@color/SecondaryColor"

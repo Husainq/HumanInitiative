@@ -16,14 +16,14 @@ class BeginFragment : Fragment() {
     ): View? {
         binding = FragmentBeginBinding.inflate(layoutInflater)
 
-        binding.btnLoginAwal.setOnClickListener{
+        binding.btnRegisAwal.setOnClickListener{
             val regisFragment = RegisFragment()
             val transaction: FragmentTransaction = requireFragmentManager().beginTransaction()
             transaction.replace(R.id.begin,regisFragment)
             transaction.commit()
         }
 
-        binding.btnRegisAwal.setOnClickListener{
+        binding.btnLoginAwal.setOnClickListener{
             val loginFragment = LoginFragment()
             val transaction: FragmentTransaction = requireFragmentManager().beginTransaction()
             transaction.replace(R.id.begin,loginFragment)

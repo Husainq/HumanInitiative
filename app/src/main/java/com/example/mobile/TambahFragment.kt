@@ -59,10 +59,10 @@ class TambahFragment : Fragment(), View.OnClickListener {
         }
 
         val bncnId = ref.push().key
-        val bncn = Bencana(bncnId!!, judul, bencana, kategori, target, tingkat, nama, norek)
+        val bncna = Bencana(bncnId!!, judul, bencana, kategori, target, tingkat, nama, norek)
 
         bncnId?.let {
-            ref.child(it).setValue(bncn).addOnCompleteListener { task ->
+            ref.child(it).setValue(bncna).addOnCompleteListener { task ->
                 if(isAdded) {
                     if (task.isSuccessful) {
                         Toast.makeText(
