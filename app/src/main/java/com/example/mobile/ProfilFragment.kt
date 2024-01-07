@@ -2,6 +2,7 @@ package com.example.mobile
 
 import android.app.Dialog
 import android.app.admin.TargetUser
+import android.content.Intent
 import android.os.Bundle
 import android.os.UserHandle
 import androidx.fragment.app.Fragment
@@ -19,6 +20,10 @@ import com.google.firebase.database.ValueEventListener
 
 class ProfilFragment : Fragment() {
     private lateinit var binding: FragmentProfilBinding
+    private lateinit var firebaseAuth: FirebaseAuth
+    private lateinit var userRef: DatabaseReference
+    private var isFragmentAttached = false // Variabel untuk menandai fragment terpasang
+
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -31,13 +36,60 @@ class ProfilFragment : Fragment() {
             transaction.replace(R.id.container,userFragment)
             transaction.commit()
         }
-        binding.keluar.setOnClickListener{
-            val loginFragment = LoginFragment()
-            val transaction: FragmentTransaction = requireFragmentManager().beginTransaction()
-            transaction.replace(R.id.container,loginFragment)
-            transaction.commit()
-        }
+
         return binding.root
     }
-}
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        isFragmentAttached = true // Set variabel bahwa fragment terpasang
+        firebaseAuth = FirebaseAuth.getInstance()
+        userRef = FirebaseDatabase.getInstance().getReference("User")
+
+        displayUserInfo()
+        binding.keluar.setOnClickListener {
+            logout()
+        }
+    }
+    private fun logout() {
+        firebaseAuth.signOut()
+        val i = Intent(requireContext(), BeginActivity::class.java)
+        startActivity(i)
+        requireActivity().finish()
+    }
+
+    override fun onDestroyView() {
+        super.onDestroyView()
+        isFragmentAttached = false // Set variabel bahwa fragment sudah tidak terpasang lagi
+    }
+
+    private fun displayUserInfo() {
+        val user = firebaseAuth.currentUser
+        val profileImageUri = user?.photoUrl
+        val userId = user?.uid
+
+        userId?.let {
+            userRef.child(it).addListenerForSingleValueEvent(object : ValueEventListener {
+                override fun onDataChange(snapshot: DataSnapshot) {
+                    if (isFragmentAttached) { // Pastikan fragment masih terpasang sebelum menggunakan konteks
+                        if (snapshot.exists()) {
+                            val username = snapshot.child("username").getValue(String::class.java)
+                            val nohp = snapshot.child("nohandphone").getValue(String::class.java)
+
+                            binding.namauser.setText(username)
+                            binding.nouser.setText(nohp)
+
+                        }
+                    }
+                }
+                override fun onCancelled(error: DatabaseError) {
+                }
+            })
+        }
+    }
+
+
+
+
+    }
 

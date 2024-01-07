@@ -5,19 +5,91 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
     tools:context=".UserFragment">
 
-    <ListView
-        android:id="@+id/infouser"
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_marginTop="16dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:flow_verticalBias="0.05"/>
+        android:layout_height="match_parent">
 
 
+        <TextView
+            android:id="@+id/o_UName"
+            android:layout_width="350dp"
+            android:layout_height="57dp"
+            android:layout_marginTop="150dp"
+            android:background="@drawable/border2"
+            android:fontFamily="@font/poppinsregular"
+            android:paddingLeft="15dp"
+            android:text="Username"
+            android:paddingTop="10dp"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/o_UEmail"
+            android:layout_width="350dp"
+            android:layout_height="57dp"
+            android:layout_marginTop="36dp"
+            android:background="@drawable/border2"
+            android:fontFamily="@font/poppinsregular"
+            android:paddingLeft="15dp"
+            android:text="Email"
+            android:paddingTop="10dp"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/o_UName" />
+
+        <TextView
+            android:id="@+id/o_UNoHp"
+            android:layout_width="350dp"
+            android:layout_height="57dp"
+            android:layout_marginTop="36dp"
+            android:background="@drawable/border2"
+            android:fontFamily="@font/poppinsregular"
+            android:paddingLeft="15dp"
+            android:text="No Handphone"
+            android:paddingTop="10dp"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/o_UEmail" />
+
+        <TextView
+            android:id="@+id/o_UPass"
+            android:layout_width="350dp"
+            android:layout_height="57dp"
+            android:layout_marginTop="32dp"
+            android:background="@drawable/border2"
+            android:fontFamily="@font/poppinsregular"
+            android:paddingLeft="15dp"
+            android:text="Password"
+            android:paddingTop="10dp"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/o_UNoHp" />
+
+        <Button
+            android:id="@+id/backBtn"
+            android:layout_width="360dp"
+            android:layout_height="60dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="35dp"
+            android:backgroundTint="@color/PrimaryColor"
+            android:text="Kembali"
+            android:background="@drawable/border"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/o_UPass"  />
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 
 

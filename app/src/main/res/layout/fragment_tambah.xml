@@ -160,7 +160,8 @@
                 android:layout_gravity="center"
                 android:background="@drawable/button_shape"
                 android:text="Simpan"
-                android:fontFamily="@font/poppinssemibold" />
+                android:fontFamily="@font/poppinssemibold"
+                android:layout_marginBottom="300dp"/>
 
         </LinearLayout>
     </ScrollView>

@@ -2,94 +2,94 @@
 <androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@color/white">
 
-    <TextView
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/o_email"
-        android:background="@drawable/border2"
-        android:layout_marginTop="60dp"
-        android:padding="8dp"
-        android:ems="10"
-        android:text="Email"
-        android:textSize="18sp"
-        android:fontFamily="@font/poppinsregular"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
+        android:layout_height="match_parent">
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/o_username"
-        android:background="@drawable/border2"
-        android:layout_marginTop="60dp"
-        android:padding="8dp"
-        android:ems="10"
-        android:text="Username"
-        android:textSize="18sp"
-        android:fontFamily="@font/poppinsregular"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@id/o_email"/>
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/o_nohphone"
-        android:background="@drawable/border2"
-        android:layout_marginTop="60dp"
-        android:padding="8dp"
-        android:ems="10"
-        android:text="No Handphone"
-        android:textSize="18sp"
-        android:fontFamily="@font/poppinsregular"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@id/o_username"/>
+        <EditText
+            android:id="@+id/o_UName"
+            android:layout_width="360dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="150dp"
+            android:background="@drawable/border2"
+            android:hint="UserName"
+            android:paddingLeft="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/o_password"
-        android:background="@drawable/border2"
-        android:layout_marginTop="60dp"
-        android:padding="8dp"
-        android:ems="10"
-        android:text="Password"
-        android:password="true"
-        android:textSize="18sp"
-        android:fontFamily="@font/poppinsregular"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@id/o_nohphone"/>
+        <EditText
+            android:id="@+id/o_UEmail"
+            android:layout_width="360dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="36dp"
+            android:background="@drawable/border2"
+            android:hint="Email"
+            android:paddingLeft="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/o_UName" />
 
-    <Button
-        android:id="@+id/btnUbahUp"
-        android:layout_width="200dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="60dp"
-        android:layout_gravity="center"
-        android:background="@drawable/button_shape"
-        android:text="Ubah data"
-        android:fontFamily="@font/poppinssemibold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@id/o_password" />
+        <EditText
+            android:id="@+id/o_UNoHp"
+            android:layout_width="360dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="32dp"
+            android:background="@drawable/border2"
+            android:hint="No Handphone"
+            android:paddingLeft="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/o_UEmail" />
 
-    <Button
-        android:id="@+id/btnCancelUp"
-        android:layout_width="200dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="60dp"
-        android:layout_gravity="center"
-        android:background="@drawable/button_shape_cancel"
-        android:textColor="@color/white"
-        android:text="Cancel"
-        android:fontFamily="@font/poppinssemibold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@id/btnUbahUp" />
+        <EditText
+            android:id="@+id/o_UPass"
+            android:layout_width="360dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="32dp"
+            android:background="@drawable/border2"
+            android:hint="Password"
+            android:paddingLeft="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/o_UNoHp" />
+
+        <Button
+            android:id="@+id/updateBtn"
+            android:layout_width="360dp"
+            android:layout_height="60dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="35dp"
+            android:backgroundTint="@color/PrimaryColor"
+            android:text="Ubah Data"
+            android:background="@drawable/border"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/o_UPass"  />
+
+        <Button
+            android:id="@+id/cancelBtn"
+            android:layout_width="360dp"
+            android:layout_height="60dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/button_shape_cancel"
+            android:textColor="@color/white"
+            android:text="Cancel"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/updateBtn"  />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
