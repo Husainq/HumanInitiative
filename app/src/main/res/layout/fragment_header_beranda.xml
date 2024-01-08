@@ -53,13 +53,13 @@
                 android:layout_marginLeft="7dp"/>
         </LinearLayout>
 
-        <ImageView
+        <de.hdodenhof.circleimageview.CircleImageView
             android:id="@+id/gambar2"
             android:layout_width="40dp"
             android:layout_height="51dp"
             android:layout_marginTop="5dp"
-            android:layout_marginLeft="50dp"
-            android:src="@drawable/fotop" />
+            android:layout_marginLeft="65dp"
+            android:src="@drawable/user" />
 
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -31,7 +31,9 @@
         android:layout_height="wrap_content"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/header">
+        android:paddingTop="10dp"
+        app:layout_constraintTop_toBottomOf="@id/header"
+        android:paddingBottom="200dp">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -85,7 +87,7 @@
                 android:layout_marginTop="16dp"
                 android:layout_marginEnd="8dp"
                 android:ems="10"
-                android:hint="Kategori (Bencana Alam Meteorologi)"
+                android:text="Kategori Bencana Alam Meteorologi/Geologi"
                 android:inputType="text"/>
 
             <EditText

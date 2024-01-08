@@ -22,14 +22,21 @@
         android:layout_below="@+id/header"
         android:layout_centerHorizontal="true">
 
-        <ImageView
+        <de.hdodenhof.circleimageview.CircleImageView
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             android:id="@+id/foto"
             android:layout_width="122dp"
             android:layout_height="120dp"
-            android:src="@drawable/fotop" />
+            android:src="@drawable/squid" />
 
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/btn_edit_logo"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:src="@drawable/edit"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent"/>
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <TextView
@@ -43,6 +50,7 @@
         android:layout_centerHorizontal="true"
         android:textSize="22sp"
         android:layout_below="@id/cl"/>
+
 
     <TextView
         android:id="@+id/nouser"
@@ -91,7 +99,7 @@
                 android:fontFamily="@font/poppinssemibold"
                 android:textColor="@color/black"
                 android:textSize="16sp"
-                android:text="Ubah Profil"/>
+                android:text="Data Profil"/>
         </LinearLayout>
 
         <LinearLayout
